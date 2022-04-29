@@ -58,12 +58,21 @@
         align-items: center;
         gap: 5px;
         }
+
+        fieldset{
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
     </style>
 </head>
 <body>
     <h1>🐱 Cat Form 🐱</h1>
     <div>
     <form class="cat_form">
+        <fieldset>
+        <legend>Cat Personal Information</legend>
+
         <label for="cat_name"><span>*</span>Cat Name:<input type="text" id="cat_name" placeholder="Kitty" name="cat_name"></label>
         <label for="cat_surname">Cat Surname:<input type="text" id="cat_surname" placeholder="Whiskers" name="cat_surname"></label>
         <label for="cat_email"><span>*</span>Cat Email:<input type="email" id="cat_email" name="cat_email" placeholder="kittywhiskers1@catmail.com"></label>
@@ -87,6 +96,10 @@
     </label>
         <label for="cat_birthday">Cat's Date of Birth: <input type="date" id="cat_birthday" name="cat_birthday"></label>
         <label for="cat_age">Cat Age:<input type="number" id="cat_age" name="cat_age"></label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Cat Bio Information</legend>
         <label for="cat_story">What's your cat's story?</label>
         <textarea rows="5" cols="10" id="cat_story" name="cat_story">Kitty Whiskers was adopted from the streets and is now a very happy big cutie cat.</textarea>
         <h2>Cat's favourite food (choose one)</h2>
@@ -104,6 +117,7 @@
             <button type="reset">Uh-oh! Reset!</button>
             <button type="button">This button does nothing!</button>
         </div>
+    </fieldset>
 </form>
 
 </div>
