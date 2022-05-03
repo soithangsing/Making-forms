@@ -7,8 +7,11 @@
     <title>Cat Form</title>
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200;400&display=swap');
+
         *{
             font-size: large;
+            font-family: 'Urbanist', sans-serif;
         }
 
         body {
@@ -22,6 +25,7 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
+            margin-bottom: 10px;
         }
 
         label{
@@ -64,12 +68,30 @@
             flex-direction: column;
             gap: 4px;
         }
+
+        ul {
+            text-align: right;
+            list-style: none;
+        }
+
+        a{
+            font-size: inherit;
+            color: red;
+            text-decoration: none;
+        }
+
+        .payments{
+            color: greenyellow;
+        }
     </style>
 </head>
 <body>
-    <h1>🐱 Cat Form 🐱</h1>
+    <ul><li><h1><a class="payments" href="/ODIN PROJECT - HTML repo/Making-forms/mozilla-payment-form.html">🦊 Mozilla Payment Form 🦊</a></h1></li>
+        <li><h1><a href="/ODIN PROJECT - HTML repo/Making-forms/mozillaform.html">🦊 Mozilla Form 🦊</a></h1></li>
+        <li><h1>🐱 Cat Form 🐱</h1></li>
+    </ul> 
     <div>
-    <form class="cat_form">
+    <form class="cat_form" action="" method="post">
         <fieldset>
         <legend>Cat Personal Information</legend>
 
