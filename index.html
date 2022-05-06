@@ -83,6 +83,31 @@
         .payments{
             color: greenyellow;
         }
+
+        .required::before{
+            content:'*';
+            color: red;
+        }
+        [data-tooltip]{
+            position: relative;
+        }
+
+        [data-tooltip]:hover::after{
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+        
+        input:required {
+            border: 1px solid red;
+        }
+        
     </style>
 </head>
 <body>
@@ -95,11 +120,11 @@
         <fieldset>
         <legend>Cat Personal Information</legend>
 
-        <label for="cat_name"><span>*</span>Cat Name:<input type="text" id="cat_name" placeholder="Kitty" name="cat_name"></label>
+        <label for="cat_name" class="required">Cat Name:<input type="text" id="cat_name" placeholder="Kitty" name="cat_name" required></label>
         <label for="cat_surname">Cat Surname:<input type="text" id="cat_surname" placeholder="Whiskers" name="cat_surname"></label>
-        <label for="cat_email"><span>*</span>Cat Email:<input type="email" id="cat_email" name="cat_email" placeholder="kittywhiskers1@catmail.com"></label>
-        <label for="password"><span>*</span>Cat Passkey: <input type="password" id="password" name="password"></label>
-        <label for="password_confirm"><span>*</span>Confirm Cat Passkey: <input type="password" id="password_confirm" name="password_confirm"></label>
+        <label for="cat_email" class="required">Cat Email:<input required type="email" id="cat_email" name="cat_email" placeholder="kittywhiskers1@catmail.com"></label>
+        <label for="password" class="required">Cat Passkey: <input required type="password" id="password" name="password"></label>
+        <label for="password_confirm" class="required" >Confirm Cat Passkey: <input required type="password" id="password_confirm" name="password_confirm"></label>
         <label id="cat_breed"for="cat_breed">Cat Breed:
         <select id="cat_breed" name="cat_breed">
            <optgroup label="Domestic">
@@ -135,9 +160,9 @@
         <label for="cat_cage">Carry Cage<input type="checkbox" id="cat_cage"></label>
         <label for="newsletter"><strong>Do you want to subscribe to Cat Newsletter?</strong><input type="checkbox" id="newsletter" name="news_letter" checked></label>
         <div class="button_class">
-            <button type="submit">Submit Cat Data</button>
-            <button type="reset">Uh-oh! Reset!</button>
-            <button type="button">This button does nothing!</button>
+            <button type="submit" data-tooltip="Pressing this button will send all your cat details to cat server.">Submit Cat Data</button>
+            <button type="reset" data-tooltip="Pressing this button will reset all your entered fields.">Uh-oh! Reset!</button>
+            <button type="button" data-tooltip="Pressing this button will do nothing!">This button does nothing!</button>
         </div>
     </fieldset>
 </form>
