@@ -1,172 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cat Form</title>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200;400&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@200;400&display=swap");
 
-        *{
-            font-size: large;
-            font-family: 'Urbanist', sans-serif;
-        }
+      * {
+        font-size: large;
+        font-family: "Urbanist", sans-serif;
+      }
 
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
 
-        .cat_form{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
+      .cat_form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
 
-        label{
-            display: flex;
-            justify-content: flex-end;
-        }
+      label {
+        display: flex;
+        justify-content: flex-end;
+      }
 
-        label>span{
-            margin-right: 4px;
-            color: red;
-        }
+      label > span {
+        margin-right: 4px;
+        color: red;
+      }
 
-        h1{
-            font-size: 2rem;
-        }
+      h1 {
+        font-size: 2rem;
+      }
 
-        h2{
-            align-self: flex-end;
-            margin-bottom: 0;
-        }
+      h2 {
+        align-self: flex-end;
+        margin-bottom: 0;
+      }
 
-        input{
-            margin-left: 4px;
-        }
+      input {
+        margin-left: 4px;
+      }
 
-        select{
-            margin-left: 4px;
-        }
+      select {
+        margin-left: 4px;
+      }
 
-        .button_class{
+      .button_class {
         display: flex;
         flex-direction: row-reverse;
         justify-content: flex-start;
         align-items: center;
         gap: 5px;
-        }
+      }
 
-        fieldset{
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
+      fieldset {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
 
-        ul {
-            text-align: right;
-            list-style: none;
-        }
+      ul {
+        text-align: right;
+        list-style: none;
+      }
 
-        a{
-            font-size: inherit;
-            color: red;
-            text-decoration: none;
-        }
+      a {
+        font-size: inherit;
+        color: red;
+        text-decoration: none;
+      }
 
-        .payments{
-            color: greenyellow;
-        }
+      .payments {
+        color: greenyellow;
+      }
 
-        .required::before{
-            content:'*';
-            color: red;
-        }
-        [data-tooltip]{
-            position: relative;
-        }
+      .required::before {
+        content: "*";
+        color: red;
+      }
+      [data-tooltip] {
+        position: relative;
+      }
 
-        [data-tooltip]:hover::after{
-            content: attr(data-tooltip);
-            position: absolute;
-            bottom: 100%;
-            left: 0;
-            right: 0;
-            margin-top: 5px;
-            margin-bottom: 5px;
-            padding: 5px;
-            background-color: antiquewhite;
-        }
-        
-        input:required {
-            border: 1px solid red;
-        }
-        
+      [data-tooltip]:hover::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 5px;
+        background-color: antiquewhite;
+      }
+
+      /* input:required {
+        border: 1px solid red;
+      }
+
+      label + span{
+          position: relative;
+      }
+    
+      label + span::before{
+          position: absolute;
+          right: -20px;
+          top: 5px;
+      }
+
+      input:invalid {
+          border: 2px solid red;
+      }
+
+      input:invalid + span::before{
+          content: '✖';
+          color: red;
+      }
+
+      input:valid + span::before{
+          content: '✓';
+          color: green;
+      } */
     </style>
-</head>
-<body>
-    <ul><li><h1><a class="payments" href="/ODIN PROJECT - HTML repo/Making-forms/mozilla-payment-form.html">🦊 Mozilla Payment Form 🦊</a></h1></li>
-        <li><h1><a href="/ODIN PROJECT - HTML repo/Making-forms/mozillaform.html">🦊 Mozilla Form 🦊</a></h1></li>
-        <li><h1>🐱 Cat Form 🐱</h1></li>
-    </ul> 
+  </head>
+  <body>
+    <ul>
+      <li>
+        <h1>
+          <a
+            class="payments"
+            href="/ODIN PROJECT - HTML repo/Making-forms/mozilla-payment-form.html"
+            >🦊 Mozilla Payment Form 🦊</a
+          >
+        </h1>
+      </li>
+      <li>
+        <h1>
+          <a href="/ODIN PROJECT - HTML repo/Making-forms/mozillaform.html"
+            >🦊 Mozilla Form 🦊</a
+          >
+        </h1>
+      </li>
+      <li><h1>🐱 Cat Form 🐱</h1></li>
+    </ul>
     <div>
-    <form class="cat_form" action="" method="post">
+      <form class="cat_form" action="" method="post">
         <fieldset>
-        <legend>Cat Personal Information</legend>
+          <legend>Cat Personal Information</legend>
 
-        <label for="cat_name" class="required">Cat Name:<input type="text" id="cat_name" placeholder="Kitty" name="cat_name" required></label>
-        <label for="cat_surname">Cat Surname:<input type="text" id="cat_surname" placeholder="Whiskers" name="cat_surname"></label>
-        <label for="cat_email" class="required">Cat Email:<input required type="email" id="cat_email" name="cat_email" placeholder="kittywhiskers1@catmail.com"></label>
-        <label for="password" class="required">Cat Passkey: <input required type="password" id="password" name="password"></label>
-        <label for="password_confirm" class="required" >Confirm Cat Passkey: <input required type="password" id="password_confirm" name="password_confirm"></label>
-        <label id="cat_breed"for="cat_breed">Cat Breed:
-        <select id="cat_breed" name="cat_breed">
-           <optgroup label="Domestic">
-            <option value="persian">Persian</option>
-            <option value="scottish_fold">Scottish Fold</option>
-            <option value="sphynx">Sphynx</option>
-            <option value="siamese">Siamese</option>
-           </optgroup>
-           <optgroup label="Wild">
-            <option value="bengal_cat">Bengal Cat</option>
-            <option value="norwegian">Norwegian Forest Cat</option>
-            <option value="bobtail">American Bobtail</option>
-            <option value="Himalayan">Himalayan Cat</option>
-           </optgroup>
-        </select>
-    </label>
-        <label for="cat_birthday">Cat's Date of Birth: <input type="date" id="cat_birthday" name="cat_birthday"></label>
-        <label for="cat_age">Cat Age:<input type="number" id="cat_age" name="cat_age"></label>
-    </fieldset>
+          <label for="cat_name" class="required"
+            >Cat Name:<input
+              type="text"
+              id="cat_name"
+              placeholder="Kitty"
+              name="cat_name"
+              required
+          /></label><span></span>
+          <label for="cat_surname"
+            >Cat Surname:<input
+              type="text"
+              id="cat_surname"
+              placeholder="Whiskers"
+              name="cat_surname"
+          /></label>
+          <label for="cat_email" class="required"
+            >Cat Email:<input
+              required
+              type="email"
+              id="cat_email"
+              name="cat_email"
+              placeholder="kittywhiskers1@catmail.com"
+          /></label><span></span>
+          <label for="password" class="required"
+            >Cat Passkey:
+            <input required type="password" id="password" name="password"
+          /></label><span></span>
+          <label for="password_confirm" class="required"
+            >Confirm Cat Passkey:
+            <input
+              required
+              type="password"
+              id="password_confirm"
+              name="password_confirm"
+          /></label><span></span>
+          <label id="cat_breed" for="cat_breed"
+            >Cat Breed:
+            <select id="cat_breed" name="cat_breed">
+              <optgroup label="Domestic">
+                <option value="persian">Persian</option>
+                <option value="scottish_fold">Scottish Fold</option>
+                <option value="sphynx">Sphynx</option>
+                <option value="siamese">Siamese</option>
+              </optgroup>
+              <optgroup label="Wild">
+                <option value="bengal_cat">Bengal Cat</option>
+                <option value="norwegian">Norwegian Forest Cat</option>
+                <option value="bobtail">American Bobtail</option>
+                <option value="Himalayan">Himalayan Cat</option>
+              </optgroup>
+            </select>
+          </label>
+          <label for="cat_birthday"
+            >Cat's Date of Birth:
+            <input type="date" id="cat_birthday" name="cat_birthday"
+          /></label>
+          <label for="cat_age"
+            >Cat Age:<input type="number" id="cat_age" name="cat_age"
+          /></label>
+        </fieldset>
 
-    <fieldset>
-        <legend>Cat Bio Information</legend>
-        <label for="cat_story">What's your cat's story?</label>
-        <textarea rows="5" cols="10" id="cat_story" name="cat_story">Kitty Whiskers was adopted from the streets and is now a very happy big cutie cat.</textarea>
-        <h2>Cat's favourite food (choose one)</h2>
-        <label for="fish">Fish<input type="radio" id="fish" value="fish" name="fav_food"></label>
-        <label for="carrot">Carrot<input type="radio" id="carrot" value="carrot" name="fav_food" checked></label>
-        <label for="chicken">Chicken<input type="radio" id="chicken" value="chicken" name="fav_food"></label>
-        <h2>What would you like to buy for your cat today?</h2>
-        <label for="collar">Paw Collar<input type="checkbox" id="collar"></label>
-        <label for="cat_food">Wet Cat Food<input type="checkbox" id="cat_food"></label>
-        <label for="nail_clippers">Cat Nail Clippers<input type="checkbox" id="nail_clippers"></label>
-        <label for="cat_cage">Carry Cage<input type="checkbox" id="cat_cage"></label>
-        <label for="newsletter"><strong>Do you want to subscribe to Cat Newsletter?</strong><input type="checkbox" id="newsletter" name="news_letter" checked></label>
-        <div class="button_class">
-            <button type="submit" data-tooltip="Pressing this button will send all your cat details to cat server.">Submit Cat Data</button>
-            <button type="reset" data-tooltip="Pressing this button will reset all your entered fields.">Uh-oh! Reset!</button>
-            <button type="button" data-tooltip="Pressing this button will do nothing!">This button does nothing!</button>
-        </div>
-    </fieldset>
-</form>
-
-</div>
-</body>
+        <fieldset>
+          <legend>Cat Bio Information</legend>
+          <label for="cat_story">What's your cat's story?</label>
+          <textarea rows="5" cols="10" id="cat_story" name="cat_story">
+Kitty Whiskers was adopted from the streets and is now a very happy big cutie cat.</textarea
+          >
+          <h2>Cat's favourite food (choose one)</h2>
+          <label for="fish"
+            >Fish<input type="radio" id="fish" value="fish" name="fav_food"
+          /></label>
+          <label for="carrot"
+            >Carrot<input
+              type="radio"
+              id="carrot"
+              value="carrot"
+              name="fav_food"
+              checked
+          /></label>
+          <label for="chicken"
+            >Chicken<input
+              type="radio"
+              id="chicken"
+              value="chicken"
+              name="fav_food"
+          /></label>
+          <h2>What would you like to buy for your cat today?</h2>
+          <label for="collar"
+            >Paw Collar<input type="checkbox" id="collar"
+          /></label>
+          <label for="cat_food"
+            >Wet Cat Food<input type="checkbox" id="cat_food"
+          /></label>
+          <label for="nail_clippers"
+            >Cat Nail Clippers<input type="checkbox" id="nail_clippers"
+          /></label>
+          <label for="cat_cage"
+            >Carry Cage<input type="checkbox" id="cat_cage"
+          /></label>
+          <label for="newsletter"
+            ><strong>Do you want to subscribe to Cat Newsletter?</strong
+            ><input type="checkbox" id="newsletter" name="news_letter" checked
+          /></label>
+          <div class="button_class">
+            <button
+              type="submit"
+              data-tooltip="Pressing this button will send all your cat details to cat server."
+            >
+              Submit Cat Data
+            </button>
+            <button
+              type="reset"
+              data-tooltip="Pressing this button will reset all your entered fields."
+            >
+              Uh-oh! Reset!
+            </button>
+            <button
+              type="button"
+              data-tooltip="Pressing this button will do nothing!"
+            >
+              This button does nothing!
+            </button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </body>
 </html>
