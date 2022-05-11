@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling enabled and disabled inputs</title>
+
+    <style>
+        input[type="text"]:disabled {
+            background: #eee;
+            border: 1px solid #ccc;
+        }
+
+    .disabled-label{
+        color: #aaa;
+    }
+
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    fieldset{
+        display: flex;
+        flex-direction: column;
+    }
+
+    fieldset div{
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+    }
+
+    .billing-checkbox{
+        margin-bottom: 0.5rem;
+    }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <fieldset id="shipping">
+            <legend>Shipping Address</legend>
+            <div>
+                <label for="name1">Name:</label>
+                <input id="name1" name="name1" type="text" required>
+            </div>
+            <div>
+                <label for="name2">Address:</label>
+                <input id="name2" name="name2" type="text" required>
+            </div>
+            <div>
+                <label for="pcode1">Zip/postal code:</label>
+                <input id="pcode1" name="pcode1" type="text" required>
+            </div>
+        </fieldset>
+        <fieldset id="billing">
+            <legend>Billing Address</legend>
+            <div>
+                <label class="billing-checkbox" for="billing-checkbox">Same as shipping address</label>
+                <input type="checkbox" id="billing-checkbox" checked>
+            </div>
+            <div>
+                <label for="name" class="billing-label disabled-label">Name: </label>
+                <input id="name" name="name" type="text" disabled required>
+            </div>
+            <div>
+                <label for="address2" class="billing-label disabled-label">Address: </label>
+                <input id="address2" name="address2" type="text" disabled required>
+            </div>
+            <div>
+                <label for="pcode2" class="billing-label disabled-label">Zip/postal code: </label>
+                <input id="pcode2" name="pcode2" type="text" disabled required> 
+            </div>
+        </fieldset>
+
+        <div><button>Submit</button></div>
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            document.getElementById('billing-checkbox').addEventListener('change', toggleBilling);
+        }, false);
+
+        function toggleBilling(){
+
+            let billingItems = document.querySelectorAll('#billing input[type="text"]');
+
+            let billingLabels = document.querySelectorAll('.billing-label');
+
+            for(let i=0; i < billingItems.length; i++) {
+                billingItems[i].disabled = !billingItems[i].disabled;
+                
+                if(billingLabels[i].getAttribute('class') === 'billing-label disabled-label') {
+                    billingLabels[i].setAttribute('class', 'billing-label');}
+                    else {
+                        billingLabels[i].setAttribute('class', 'billing-label disabled-label');
+                    }
+                }
+            }
+        
+    </script>
+</body>
+</html>
