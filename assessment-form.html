@@ -50,6 +50,21 @@
       input:focus {
           background-color: aliceblue;
       }
+
+      input[type="range"] {
+          margin-top: 10px;
+          appearance: none;
+          -webkit-appearance: none;
+          background: red;
+          height: 2px;
+          padding: 0;
+          outline: 1px solid transparent;
+      }
+
+      input[type="color"] {
+          border: 0;
+          padding: 0;
+      }
     </style>
   </head>
 
@@ -77,6 +92,14 @@
             <option>Pizza</option>
             <option>Fajitas</option>
           </select>
+        </li>
+        <li>
+            <label for="range">Range</label>
+            <input id="range" type="range">
+        </li>
+        <li>
+            <label for="color"></label>Color</label>
+            <input id="color" type="color">
         </li>
         <li class="button_list">
           <button>Update preferences</button>
