@@ -1,0 +1,33 @@
+form {
+  max-width: 450px;
+}
+
+form > div {
+  position: relative;
+}
+
+form > div > label {
+  opacity: 0.3;
+  position: absolute;
+  top: 2px;
+  left: 20px;
+}
+
+form > div > input[type="text"]:valid,
+form > div > input[type="email"]:valid,
+form > div > input[type="password"]:valid {
+  border: 2px solid greenyellow;
+}
+
+form > div > input[type="text"]:valid + label,
+form > div > input[type="email"]:valid + label,
+form > div > input[type="password"]:valid + label {
+  opacity: 0;
+}
+
+form > div > input[type="text"]:focus + label,
+form > div > input[type="email"]:focus + label,
+form > div > input[type="password"]:focus + label {
+  opacity: 0;
+}
+/*# sourceMappingURL=style.css.map */

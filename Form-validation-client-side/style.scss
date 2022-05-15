@@ -1,0 +1,35 @@
+form {
+    max-width: 450px;
+    
+    // positioning context
+    > div {
+      position: relative;
+  
+      // Looks like placeholder
+      > label {
+        opacity: 0.3;
+        position: absolute;
+        top: 2px;
+        left: 20px;
+      }
+  
+      >input[type="text"],
+      > input[type="email"],
+      > input[type="password"] {
+
+        &:valid {
+            border: 2px solid greenyellow;
+
+            & + label {
+                opacity: 0;
+            }
+        }
+
+        &:focus {
+          & + label {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
