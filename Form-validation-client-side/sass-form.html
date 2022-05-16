@@ -11,11 +11,31 @@
     <form>
       
       <div>
-        <input type="text" id="first_name" name="first_name" required/>
+        <input type="text" id="first_name" name="first_name" placeholder=" " required/>
         <label for="first_name">First Name</label>
+      </div>
+
+      <div>
+        <input id="email" type="email" name="email" placeholder=" " required>
+        <label for="email">Email Address</label>
+        <div class="requirements">
+          Must be a valid email address for eg: meowmeow@catworld.com
+        </div>
+      </div>
+
+      <div>
+        <input type="password" id="password" name="password" required placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
+        <label for="password">Password</label>
+        <div class="requirements">
+          Your password must be atleast 6 characters as well as contain at least one uppercase, one lowercase, and one number.
+        </div>
       </div>
 
       <input type="submit" value="Sign Up" />
     </form>
+
+    <div>
+      <a href="https://css-tricks.com/form-validation-ux-html-css/">Link to original article</a>
+    </div>
   </body>
 </html>
